@@ -1,1 +1,139 @@
+/* Basic page styling */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f4ed;
+    color: #333333;
+    line-height: 1.6;
+}
 
+/* Skip link - hidden until focused */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 10px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* Header */
+header {
+    background-color: #7b5e3b;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+}
+
+/* Navigation using Flexbox */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+nav a {
+    display: block;
+    color: white;
+    background-color: #a67c52;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Hover effect */
+nav a:hover {
+    background-color: #5c4328;
+    transform: scale(1.08);
+}
+
+/* Main content */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+}
+
+/* All images - Box Model */
+img {
+    max-width: 100%;
+    height: auto;
+    border: 4px solid #7b5e3b;
+    padding: 8px;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+/* Grid for Sacred Places gallery */
+.temple-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.temple-gallery article {
+    background-color: #fff8e8;
+    padding: 15px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+/* nth-child selector */
+.temple-gallery article:nth-child(even) img {
+    border-radius: 50%;
+}
+
+/* Flexbox for Bhakti practices */
+.bhakti-practices {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bhakti-practices article {
+    flex: 1 1 200px;
+    background-color: #fff8e8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #7b5e3b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .temple-gallery {
+        grid-template-columns: 1fr;
+    }
+}
